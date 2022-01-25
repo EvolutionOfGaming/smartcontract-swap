@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.9+commit.e5eed63a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/library/SharedStruct.sol": "SharedStructs"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/library/SharedStruct.sol": {
+			"keccak256": "0x654b4331f80cd65f5aac03405d904e1b310fd5e46edaaf2c459b5e258562cbe9",
+			"license": "MIT OR Apache-2.0",
+			"urls": [
+				"bzz-raw://a3f6f71617c67d0a2c12ed3f510f52975e24f77a823c1f5e90d958fb8b80c142",
+				"dweb:/ipfs/QmUrpvTirzJwZAsLZWSwuKNUB2hB31MRtX4ZKWp255E96d"
+			]
+		}
+	},
+	"version": 1
+}
