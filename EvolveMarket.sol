@@ -29,13 +29,20 @@ contract EvolveMarket is Context, Ownable{
         return true;
     }
 
-    function swapTokenToEvolve(uint _evolveAmount, uint _tokenIndex) public returns(bool){
+    function multiply(uint256 a, uint256 b, uint decimals) private pure returns(uint256){
+        uint result = (a*b)/(10**(decimals));
+        return result;
+    }
+
+     function swapTokenToEvolve(uint256 _evolveAmount, uint256 _tokenIndex) public returns(bool){
         ERC20 currentToken = _tokenList[_tokenIndex];
-        uint stableTokenAmount = _evolveAmount.mul(tokenPriceWithUSD);
+        uint256 stableTokenAmount = multiply(_evolveAmount,tokenPriceWithUSD , 18);
         currentToken.transferFrom(_msgSender(), owner(), stableTokenAmount);
-        uint evolveWithDecimal = _evolveAmount * 10 ** 18;
-        tokenMarket.transferFrom(owner(),_msgSender(), evolveWithDecimal);
+        tokenMarket.transferFrom(owner(),_msgSender(), _evolveAmount);
         return true;
     }
+
+
+    
 
 }
