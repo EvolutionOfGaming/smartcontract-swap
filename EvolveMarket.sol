@@ -1,11 +1,11 @@
 /* SPDX-License-Identifier: MIT OR Apache-2.0 */
 pragma solidity ^0.8.9;
-import "./library/SafeMath.sol";
-import "./library/Address.sol";
-import "./library/Context.sol";
-import "./library/Ownable.sol";
-import "./library/IERC20.sol";
-import "./library/ERC20.sol";
+import "./SafeMath.sol";
+import "./Address.sol";
+import "./Context.sol";
+import "./Ownable.sol";
+import "./IERC20.sol";
+import "./ERC20.sol";
 contract EvolveMarket is Context, Ownable{
     using SafeMath for uint256;
     using Address for address;
@@ -41,8 +41,4 @@ contract EvolveMarket is Context, Ownable{
         tokenMarket.transferFrom(owner(),_msgSender(), _evolveAmount);
         return true;
     }
-
-
-    
-
 }
